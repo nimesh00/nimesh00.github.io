@@ -1,0 +1,130 @@
+/*
+.header {
+    height: 5em;
+    width: 100%;
+}
+
+.header a img {
+    max-height: 100%;
+    width: auto;
+    height:inherit;
+    display: block;
+}
+*/
+
+body .main {
+    overflow: hidden;
+    display: inline-block;
+    width: 100%;
+}
+
+.main-left {
+    position: fixed;
+    float: left;
+    width:20%;
+    margin-top:8%;
+}
+
+.main-left .menu{
+    float: left;
+    display: block;
+    width: 100%;
+    margin:auto;
+    text-align: center;
+}
+.menu ul {
+    list-style-type: none;
+    text-align: center;
+    padding: inherit;
+    font-size: 2em;
+}
+.menu ul a {
+    text-decoration: none;
+}
+.menu ul a:visited a:active a:link {
+    text-decoration: none;
+    color:black;
+}
+
+.menu ul li {
+    padding: 3%;
+}
+.menu ul li:hover {
+    font-size: 1.02em;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.main-left .home-icon{
+    height: 5em;
+    width: auto;
+    z-index:-1;
+}
+
+.home-icon img {
+    height: 5em;
+    width:auto;
+    margin:auto;
+    
+}
+
+.home-icon img:hover {
+    height: 5.2em;
+}
+
+.main-right {
+    display: block;
+    float: right;
+    width:80%;
+    text-align:justify;
+    margin-top: 3%;
+    font-size: 1.5em;
+}
+
+.main-img {
+    margin:auto;
+    display: block;
+    height: 30%;    
+}
+
+.main-img img{
+    display: block;
+    margin:auto;
+    border-radius: 50%;
+}
+
+.main-right .heading {
+    font-size: 1.05em;
+    font-family: cursive;
+    margin: 2%;
+    text-align: center;
+}
+
+.main-right .description {
+    padding-top: 1%;
+    padding-bottom: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-bottom: 10%;
+}
+
+@media only screen and (max-width: 768px) {
+    .main-right {
+        width:100%;
+        font-size: 1.3em;
+    }
+    .main-right .heading {
+        font-size: 1.15em;
+        font-family: cursive;
+        margin: 8%;
+        text-align: center;
+    }
+    .main-right .description {
+        padding: 10%;
+        margin-bottom: 10%;
+    }
+}
+
+.about {
+    
+}
+
