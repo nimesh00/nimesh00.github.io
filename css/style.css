@@ -19,27 +19,38 @@ body .main {
 }
 
 .main-left {
+    font-family: 'Red Hat Display', sans-serif;
     position: fixed;
     float: left;
     width:20%;
     margin-top:8%;
 }
 
-.main-left .menu{
+.menu{
     float: left;
-    display: block;
+/*    display: block;*/
     width: 100%;
     margin:auto;
     text-align: center;
 }
+.menu-icon {
+    display: none;
+}
+
+.menu {
+    display: block;
+}
+
 .menu ul {
     list-style-type: none;
     text-align: center;
     padding: inherit;
-    font-size: 2em;
+    font-size: 2.0em;
+/*    background-color: rgba(50, 60, 400, 0.1);*/
 }
 .menu ul a {
     text-decoration: none;
+    color: black;
 }
 .menu ul a:visited a:active a:link {
     text-decoration: none;
@@ -55,20 +66,26 @@ body .main {
 }
 
 .main-left .home-icon{
+    position: relative;
     height: 5em;
     width: auto;
-    z-index:-1;
+    margin: auto;
+/*    z-index:-1;*/
+/*    border-radius: 40%;*/
 }
 
 .home-icon img {
-    height: 5em;
+    height: 3em;
     width:auto;
-    margin:auto;
-    
+    margin-top: 5%;
+}
+
+.home-icon:hover {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 
 .home-icon img:hover {
-    height: 5.2em;
+    height: 3.2em;
 }
 
 .main-right {
@@ -76,30 +93,42 @@ body .main {
     float: right;
     width:80%;
     text-align:justify;
-    margin-top: 3%;
+/*    margin-top: 0%;*/
     font-size: 1.5em;
 }
 
 .main-img {
     margin:auto;
-    display: block;
-    height: 30%;    
+/*    display: block;*/
+    position: relative;
+    height: 800px; 
+    overflow: hidden;
 }
 
 .main-img img{
-    display: block;
+/*    display: block;*/
+    position: relative;
+/*    height: 200%;*/
+    width: 100%;
+/*    top: -16.5em;*/
+/*    bottom: 16.5em;*/
+    bottom: 50%;
+/*    left: 4em;*/
     margin:auto;
-    border-radius: 50%;
+    border-bottom-left-radius: 48%;
+    border-top-left-radius: 48%;
 }
 
 .main-right .heading {
-    font-size: 1.05em;
-    font-family: cursive;
+    font-size: 1.2em;
+/*    font-family: cursive;*/
+    font-family: 'Bruno Ace SC', cursive;
     margin: 2%;
     text-align: center;
 }
 
 .main-right .description {
+    font-family: 'Poppins', sans-serif;
     padding-top: 1%;
     padding-bottom: 5%;
     padding-left: 10%;
@@ -132,14 +161,78 @@ body .main {
     width: 50%;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1300px) {
+    .main-img img {
+        position: relative;
+        bottom: 10em;
+        border-bottom-left-radius: 50%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .main-left {
+        position: fixed;
+        top: 0%;
+        width: 100%;
+/*        height: 10%;*/
+        align-content: center;
+        z-index: 10;
+        margin-top: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .menu-icon {
+        position: relative;
+        width: 100%;
+        display: block;
+        height: 4em;
+        z-index: 10;
+        align-content: center;
+        margin: auto;
+        vertical-align:middle;
+    }
+    
+    .menu-icon img {
+        position: relative;
+        left: 5%;
+        width: 30px;
+        margin-top: 3%;
+    }
+    
+    .menu-icon img:hover {
+        width: 34px;
+    }
+    
+    .menu {
+        display: none;
+        position: fixed;
+        height: 100%;
+/*        z-index: 10;*/
+        background-color: rgba(100, 100, 100, 0.7);
+    }
+    .menu ul li{
+/*        display: none;*/
+/*        display: inline-block;*/
+/*        width: 20%;*/
+    }
+    
+    .main-img {
+        height: 20em;
+    }
+    .main-img img {
+/*        left: 20%;*/
+        margin-top: 4em;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
     .main-right {
+        position: relative;
+        top: 3em;
         width:100%;
         font-size: 1.3em;
     }
     .main-right .heading {
         font-size: 1.15em;
-        font-family: cursive;
+        font-family: 'Bruno Ace SC', cursive;
         margin: 8%;
         text-align: center;
     }
@@ -158,7 +251,7 @@ body .main {
 }
 
 .icons a img{
-    height: 20px;
-    width: 20px;
+    height: 40px;
+    width: 40px;
 }
 
