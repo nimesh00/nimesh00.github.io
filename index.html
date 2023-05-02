@@ -8,6 +8,11 @@
         
         <!-- loading css files -->
         <link rel="stylesheet" href="css/style.css"/>
+        <style>
+/*          @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');*/
+/*        @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:wght@300&display=swap');*/
+        @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:wght@300&family=Red+Hat+Display:wght@500&display=swap');
+        </style>
 	</head>
 	<body>
         <div class="site-content">
@@ -18,14 +23,20 @@
 -->
             <div class="main">
                 <div class="main-left">
-                    <div class="menu">
+                    <div class="menu-icon">
+                        <img src="images/hamburger.png"/>
+<!--                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">-->
+<!--                            <i class="fa fa-bars"></i>-->
+<!--                        </a>-->
+                    </div>
+                    <div class="menu" id="menu-list">
                         <div class="home-icon">
-                            <a href="#"><img src="/images/home.jpg"/></a>
+                            <a href="#"><img src="/images/home.png"/></a>
                         </div>
                         <ul>
                             <li><a href="#about">About</a></li>
                             <li><a href="#projects">Projects</a></li>
-                            <li><a href="#experience">Exprience</a></li>
+                            <li><a href="#experience">Experience</a></li>
                             <li><a href="#interests">Interests</a></li>
                             <li><a href="#skills">Skills</a></li>
                             <li><a href="#contact">Contact</a></li>
@@ -34,7 +45,7 @@
                 </div>
                 <div class="main-right">
                     <div class="main-img">
-                        <img src="/images/nimesh.jpg"/>
+                        <img src="/images/nimesh_svan_blurred.png"/>
                     </div>
                     <div class="heading" id="intro">
                         Hi there!
@@ -63,6 +74,7 @@
                             <li><a>Autonomous Path-finding using Image processing from an overhead camera</a></li>
                             <li><a>Dynamic Recrystallization (Python/C++)</a></li>
                             <li><a>Using GoPro camera for live FPV camera feed on a drone</a></li>
+                            <li>Einstein field equations generator written in python using SymPy</li>
                         </ul>
                     </div>
                     <div class="heading" id="experience">
@@ -73,6 +85,7 @@
                             <li>Member and Mentor at <a href="http://zine.co.in/" target="_blank">ZINE</a>, the research and robotics group at MNIT Jaipur</li>
                             <li>Web-Developer at Drawberg Digital (Dec 2018-Feb 2019)</li>
                             <li>Project Intern at Department of Aerospace Engineering, IISc, Bangalore (May 2019-July 2019)</li>
+                            <li>Attended the "Elite summer school on Robotics" at SDU, Odense, Denmark. (August, 2022)</li>
                         </ul>
                     </div>
                     <div class="heading" id="interests">
@@ -144,5 +157,6 @@
             </div>
 -->
         </div>
+        <script src="scripts/main.js"></script>
 	</body>
 </html>
