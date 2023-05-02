@@ -48,8 +48,11 @@ window.addEventListener("DOMContentLoaded", function () {
 //    console.log(list_item);
     
     list_item.forEach(el => el.addEventListener('click', event => {
-//      console.log("Item clicked");
+        console.log("Item clicked");
+        console.log(hamburger1.style.display)
+        if (list.style.display === "block") {
             list.style.display = "none";
+        }
     }));
     
 //    list_item.addEventListener('click', function() {
