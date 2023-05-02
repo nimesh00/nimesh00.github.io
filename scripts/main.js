@@ -43,12 +43,20 @@ window.addEventListener("DOMContentLoaded", function () {
         toggleMenuIcon(nav, navIcon);
     });
     
-    const list_item = document.querySelector(".menu ul li");
+    const list_item = document.querySelectorAll(".menu ul li");
     
-    list_item.addEventListener('click', function() {
-        if (list_item.style.display === "block") {
-            list_item.style.display = "none";
-        }
-    });
+//    console.log(list_item);
+    
+    list_item.forEach(el => el.addEventListener('click', event => {
+//      console.log("Item clicked");
+            list.style.display = "none";
+    }));
+    
+//    list_item.addEventListener('click', function() {
+//        console.log("Item clicked");
+//        if (list_item.style.display === "block") {
+//            list_item.style.display = "none";
+//        }
+//    });
     
 });
