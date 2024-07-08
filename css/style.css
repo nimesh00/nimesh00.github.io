@@ -12,6 +12,10 @@
 }
 */
 
+body {
+    margin: 0;
+}
+
 body .main {
     overflow: hidden;
     display: inline-block;
@@ -154,7 +158,7 @@ body .main {
 .info-bar .type {
     text-align: center;
 /*    background-color:burlywood;*/
-    background-color: aquamarine;
+    background-color: darkcyan;
 }
 
 .info-bar .advanced {
@@ -184,7 +188,7 @@ body .main {
         align-content: center;
         z-index: 10;
         margin-top: 0;
-        background-color: rgba(0, 0, 0, 0.4);
+        background-color: rgba(0, 0, 0, 0.7);
     }
     .menu-icon {
         position: relative;
