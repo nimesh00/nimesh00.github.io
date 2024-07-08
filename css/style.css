@@ -153,7 +153,8 @@ body .main {
 
 .info-bar .type {
     text-align: center;
-    background-color:burlywood;
+/*    background-color:burlywood;*/
+    background-color: aquamarine;
 }
 
 .info-bar .advanced {
