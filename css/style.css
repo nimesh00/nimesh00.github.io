@@ -45,7 +45,7 @@ body .main {
     list-style-type: none;
     text-align: center;
     padding: inherit;
-    font-size: 2.0em;
+    font-size: 1.7em;
 /*    background-color: rgba(50, 60, 400, 0.1);*/
 }
 .menu ul a {
@@ -61,7 +61,7 @@ body .main {
     padding: 3%;
 }
 .menu ul li:hover {
-    font-size: 1.02em;
+    font-size: 1.0em;
     background: rgba(0, 0, 0, 0.1);
 }
 
@@ -101,22 +101,26 @@ body .main {
     margin:auto;
 /*    display: block;*/
     position: relative;
-    height: 800px; 
+    height: 300px; 
+    width: 30%;
     overflow: hidden;
 }
 
 .main-img img{
-/*    display: block;*/
+    display: block;
     position: relative;
-/*    height: 200%;*/
-    width: 100%;
-/*    top: -16.5em;*/
+    height: 100%;
+/*    width: 80%;*/
+/*    top: -3.5em;*/
 /*    bottom: 16.5em;*/
-    bottom: 50%;
+/*    bottom: -50%;*/
 /*    left: 4em;*/
     margin:auto;
-    border-bottom-left-radius: 48%;
-    border-top-left-radius: 48%;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    
 }
 
 .main-right .heading {
@@ -129,11 +133,12 @@ body .main {
 
 .main-right .description {
     font-family: 'Poppins', sans-serif;
+    font-size: 19px;
     padding-top: 1%;
     padding-bottom: 5%;
-    padding-left: 10%;
-    padding-right: 10%;
-    margin-bottom: 10%;
+    padding-left: 7%;
+    padding-right: 7%;
+/*    margin-bottom: 10%;*/
 }
 
 .skill-name {
@@ -164,8 +169,8 @@ body .main {
 @media only screen and (max-width: 1300px) {
     .main-img img {
         position: relative;
-        bottom: 10em;
-        border-bottom-left-radius: 50%;
+/*        bottom: 10em;*/
+/*        border-bottom-left-radius: 50%;*/
     }
 }
 
@@ -207,7 +212,7 @@ body .main {
         position: fixed;
         height: 100%;
 /*        z-index: 10;*/
-        background-color: rgba(100, 100, 100, 0.7);
+        background-color: rgba(100, 100, 100, 0.99);
     }
     .menu ul li{
 /*        display: none;*/
@@ -216,13 +221,15 @@ body .main {
     }
     
     .main-img {
-        height: 30em;
+/*        height: 30em;*/
+        width: 70%;
     }
     .main-img img {
+        height: 100%;
 /*        left: 20%;*/
-        margin-top: 4em;
-        border-top-left-radius: 0;
-        border-bottom-left-radius: 0;
+/*        margin-top: 4em;*/
+/*        border-top-left-radius: 20px;*/
+/*        border-bottom-left-radius: 20px;*/
     }
     .main-right {
         position: relative;
@@ -245,13 +252,16 @@ body .main {
 
 @media only screen and (max-width: 500px) {
     .main-img {
-        height: 20em;
+/*        height: 20em;*/
+/*        height: 100px;*/
     }
     .main-img img {
 /*        left: 20%;*/
+/*
         margin-top: 4em;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
+*/
     }
 }
 
