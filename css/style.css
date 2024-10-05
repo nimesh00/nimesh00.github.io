@@ -14,6 +14,10 @@
 
 body {
     margin: 0;
+/*    background-color: #eee8d5;*/
+    background-color: #fdf6e3;
+    color: #073642;
+/*    color: #002b36;*/
 }
 
 body .main {
@@ -140,6 +144,7 @@ body .main {
     line-height: 1.7;
     font-family: 'Poppins', sans-serif;
     font-size: 19px;
+    font-weight: bold;
     padding-top: 1%;
     padding-bottom: 5%;
     padding-left: 12%;
@@ -148,6 +153,8 @@ body .main {
 }
 a {
     text-decoration: none;
+/*    color:#003366;*/
+    color: #586e75;
 }
 .svan {
     color: #5c8050;
@@ -182,7 +189,8 @@ a {
 .info-bar .type {
     text-align: center;
 /*    background-color:burlywood;*/
-    background-color: darkcyan;
+/*    background-color: darkcyan;*/
+    background-color: #2aa198;
 }
 
 .info-bar .advanced {
