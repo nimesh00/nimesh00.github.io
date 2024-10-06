@@ -419,4 +419,7 @@ body.dark .info-bar .type {
     height: 40px;
     width: 40px;
 }
+body.dark .icons {
+    filter: invert(1) grayscale(100%) contrast(70%);
+}
 
