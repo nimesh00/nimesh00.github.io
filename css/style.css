@@ -19,11 +19,78 @@ body {
     color: #073642;
 /*    color: #002b36;*/
 }
+body.dark {
+    background-color: #002b36;
+    color: #fdf6e3;
+}
 
 body .main {
     overflow: hidden;
     display: inline-block;
     width: 100%;
+}
+
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 2%;
+    right: 2%;
+    z-index: 10;
+}
+
+#toggle-button {
+    background-color: transparent;
+    border: none;
+}
+
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.checkbox-label {
+  background-color: #002b36;
+  width: 50px;
+  height: 26px;
+  border-radius: 50px;
+  position: relative;
+/*  padding: 5px;*/
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+body.dark .checkbox-label {
+    background-color: #586e75;
+}
+
+i.light {
+    position: absolute;
+    font-style: normal;
+    left: 5px;
+}
+
+i.dark {
+    position: absolute;
+    font-style: normal;
+    right: 10px;
+}
+
+.checkbox-label .ball {
+  background-color: #93a1a1;
+  width: 22px;
+  height: 22px;
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  border-radius: 50%;
+  transition: transform 0.2s linear;
+}
+body.dark .checkbox-label .ball {
+    background-color: #eee8d5;
+}
+
+body.dark .checkbox-label .ball {
+  transform: translateX(24px);
 }
 
 .main-left {
@@ -40,6 +107,9 @@ body .main {
     width: 100%;
     margin:auto;
     text-align: center;
+}
+body.dark .menu a {
+    color: #eee8d5;
 }
 .menu-icon {
     display: none;
@@ -58,11 +128,9 @@ body .main {
 }
 .menu ul a {
     text-decoration: none;
-    color: black;
 }
 .menu ul a:visited a:active a:link {
     text-decoration: none;
-    color:black;
 }
 
 .menu ul li {
@@ -94,6 +162,10 @@ body .main {
 
 .home-icon img:hover {
     height: 3.2em;
+}
+
+body.dark .home-icon img {
+    filter: invert(1) grayscale(50%) contrast(10%);
 }
 
 .main-right {
@@ -156,6 +228,11 @@ a {
 /*    color:#003366;*/
     color: #586e75;
 }
+/*
+body.dark a {
+    color: #eee8d5;
+}
+*/
 .svan {
     color: #5c8050;
 }
@@ -185,12 +262,18 @@ a {
     margin-bottom: 5%;
     background-color: rgba(0, 0, 0, 0.2);
 }
+body.dark .info-bar {
+    background-color: #586e75;
+}
 
 .info-bar .type {
     text-align: center;
 /*    background-color:burlywood;*/
 /*    background-color: darkcyan;*/
     background-color: #2aa198;
+}
+body.dark .info-bar .type {
+    background-color: #eee8d5;
 }
 
 .info-bar .advanced {

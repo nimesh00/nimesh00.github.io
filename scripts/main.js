@@ -6,6 +6,28 @@
 //        x.style.display = "block";
 //    }
 //}
+//function toggleDarkMode() {
+//    var element = document.body;
+//    element.classList.toggle("dark");
+//    //    var checkbox = document.getElementById("dark-mode-toggle")
+//    //    checkbox.addEventListener("change", () => {
+//    //        document.body.classList.toggle("dark")
+//    //    })
+//}
+
+var toggleButton = document.getElementById('toggle-button');
+
+// Toggle dark mode when button is clicked
+toggleButton.addEventListener('click', function() {
+  document.body.classList.toggle("dark");
+
+  // Save the dark mode state to localStorage
+  if (document.body.classList.contains('dark-mode')) {
+    localStorage.setItem('darkMode', 'enabled');
+  } else {
+    localStorage.setItem('darkMode', 'disabled');
+  }
+});
 
 function toggleMenuIcon(NavList, NacIcon) {
     if (NavList.style.display === "block") {
