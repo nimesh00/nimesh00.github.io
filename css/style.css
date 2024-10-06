@@ -289,6 +289,10 @@ body.dark .info-bar .type {
     width: 50%;
 }
 
+.footer {
+    text-align: center;
+}
+
 @media only screen and (max-width: 1300px) {
     .main-img img {
         position: relative;
