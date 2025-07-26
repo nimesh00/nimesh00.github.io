@@ -1,0 +1,15 @@
+sidebar_main:
+  - title: "About"
+    url: /about/
+  - title: "Projects"
+    url: /projects/
+  - title: "Notes"
+    url: /notes/
+  - title: "Experience"
+    url: /experience/
+  - title: "Interests"
+    url: /interests/
+  - title: "Skills"
+    url: /skills/
+  - title: "Contact"
+    url: /contact/

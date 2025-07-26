@@ -1,0 +1,33 @@
+---
+layout: default
+author_profile: true
+sidebar:
+  nav: "sidebar_main"
+---
+
+<div class="home">
+  <div class="heading" id="intro">
+    Hi there!
+  </div>
+  <div class="description">
+    {{ content }}
+  </div>
+
+  <h2>Latest Notes</h2>
+  <ul>
+    {% for note in site.notes limit:5 %}
+      <li>
+        <a href="{{ note.url | relative_url }}">{{ note.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h2>Latest Projects</h2>
+  <ul>
+    {% for project in site.projects limit:5 %}
+      <li>
+        <a href="{{ project.url | relative_url }}">{{ project.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
