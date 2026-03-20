@@ -1,87 +1,44 @@
-//function ToggleMenu() {
-//    const x = document.getElementById("#menu-list");
-//    if (x.style.display === "block") {
-//        x.style.display = "none";
-//    } else {
-//        x.style.display = "block";
-//    }
-//}
-//function toggleDarkMode() {
-//    var element = document.body;
-//    element.classList.toggle("dark");
-//    //    var checkbox = document.getElementById("dark-mode-toggle")
-//    //    checkbox.addEventListener("change", () => {
-//    //        document.body.classList.toggle("dark")
-//    //    })
-//}
-
-var toggleButton = document.getElementById('toggle-button');
-
-// Toggle dark mode when button is clicked
-toggleButton.addEventListener('click', function() {
-  document.body.classList.toggle("dark");
-
-  // Save the dark mode state to localStorage
-  if (document.body.classList.contains('dark-mode')) {
-    localStorage.setItem('darkMode', 'enabled');
-  } else {
-    localStorage.setItem('darkMode', 'disabled');
+// Theme toggle
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+  // Load saved theme
+  if (localStorage.getItem('darkMode') === 'enabled') {
+    document.body.classList.add('dark');
   }
-});
 
-function toggleMenuIcon(NavList, NacIcon) {
-    if (NavList.style.display === "block") {
-        NavList.style.display = "none";
-    } else {
-        NavList.style.display = "block";
-    }
+  themeToggle.addEventListener('click', function () {
+    document.body.classList.toggle('dark');
+    localStorage.setItem('darkMode', document.body.classList.contains('dark') ? 'enabled' : 'disabled');
+  });
 }
 
-//const menu_icon_button = document.querySelector("#menu-icon");
+// Mobile nav toggle
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
 
-//menu_icon_button.onclick = () => {
-//    ToggleMenu();
-//};
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', function () {
+    navToggle.classList.toggle('active');
+    navLinks.classList.toggle('active');
+  });
 
-// Only begin executing JavaScript after all DOM content is loaded
-window.addEventListener("DOMContentLoaded", function () {
-    // Get hamburger menu btns
-    const hamburger1 = document.querySelector('.menu-icon');
-    const list = document.querySelector('.menu');
-    
-//    if (hamburger1.style.display === "block") {
-//        console.log("showing list");
-//        list.style.display = "none";
-//    } else {
-//        list.style.display = "block";
-//        console.log(hamburger1.style.display)
-//        console.log("hiding list");
-//    }
-
-    // Toggle menu when clicked
-    hamburger1.addEventListener('click', function() {
-        const navIcon = document.querySelector('.menu-icon');
-        const nav = document.querySelector('.menu');
-        toggleMenuIcon(nav, navIcon);
+  // Close menu when a link is clicked
+  navLinks.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      navToggle.classList.remove('active');
+      navLinks.classList.remove('active');
     });
-    
-    const list_item = document.querySelectorAll(".menu ul li");
-    
-//    console.log(list_item);
-    
-    list_item.forEach(el => el.addEventListener('click', event => {
-//        console.log("Item clicked");
-//        console.log(hamburger1.style.display)
-        if (list.style.display === "block") {
-            list.style.display = "none";
-        }
-    }));
-    
-//    list_item.addEventListener('click', function() {
-//        console.log("Item clicked");
-//        if (list_item.style.display === "block") {
-//            list_item.style.display = "none";
-//        }
-//    });
-    
+  });
+}
+
+// Navbar background on scroll
+window.addEventListener('scroll', function () {
+  var navbar = document.getElementById('navbar');
+  if (navbar) {
+    if (window.scrollY > 50) {
+      navbar.style.boxShadow = '0 1px 8px rgba(0,0,0,0.08)';
+    } else {
+      navbar.style.boxShadow = 'none';
+    }
+  }
 });

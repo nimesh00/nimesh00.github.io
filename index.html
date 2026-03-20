@@ -1,176 +1,408 @@
 <!DOCTYPE html>
-<html>
-	<head>
-        <meta charset="UTF-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1">
-		<title> Nimesh Khandelwal's webpage </title>
-        
-        <!-- loading css files -->
-        <link rel="stylesheet" href="css/style.css"/>
-        <style>
-/*          @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');*/
-/*        @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:wght@300&display=swap');*/
-        @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Poppins:wght@300&family=Red+Hat+Display:wght@500&display=swap');
-        </style>
-	</head>
-	<body>
-        <div class="site-content">
-<!--
-            <div class="header">
-                <a href="/"></a>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nimesh Khandelwal | Robotics Researcher & Engineer</title>
+    <link rel="stylesheet" href="css/style.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="/" class="nav-logo">NK</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#publications">Research</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+          <!-- <span class="theme-icon light-icon">&#9790;</span>
+          <span class="theme-icon dark-icon">&#9728;</span> -->
+
+          <span class="theme-icon light-icon">&#x1F319;</span>
+          <span class="theme-icon dark-icon">&#x1F315;</span>
+
+          <!-- <label for="checkbox" class="checkbox-label">
+              <i class="light">&#x1F315;</i>
+              <i class="dark">&#x1F319;</i>
+              <span class="ball"></span>
+          </label> -->
+        </button>
+      </div>
+    </nav>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="hero" id="hero">
+        <div class="hero-content">
+          <div class="hero-text">
+            <p class="hero-greeting">Hi, I'm</p>
+            <h1 class="hero-name">Nimesh Khandelwal</h1>
+            <p class="hero-tagline">Robotics Researcher &amp; Co-Founder, <a href="https://xterrarobotics.com" target="_blank" class="xterra-link"><span class="xterra">xTerra</span> <span class="robotics">Robotics</span></a></p>
+            <p class="hero-description">PhD researcher at IIT Kanpur, working on software development and motion control for legged robots. Co-building a commercial quadruped robot for industrial inspection and surveillance.</p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Get in Touch</a>
+              <a href="documents/NimeshResumeOnePager.pdf" target="_blank" class="btn btn-secondary">Resume</a>
             </div>
--->
-            <div class="main">
-                <div class="dark-mode-toggle">
-                    <button id="toggle-button">
-<!--                        <input type="checkbox" class="checkbox" id="dark-mode-toggle">-->
-                        <label for="checkbox" class="checkbox-label">
-<!--                            <i class="light">&#x1F506;</i>-->
-                            <i class="light">&#x1F315;</i>
-                            <i class="dark">&#x1F319;</i>
-                            <span class="ball"></span>
-                        </label>
-                    </button>
-                </div>
-                <div class="main-left">
-                    <div class="menu-icon">
-                        <img src="images/hamburger.png"/>
-<!--                        <a href="javascript:void(0);" class="icon" onclick="myFunction()">-->
-<!--                            <i class="fa fa-bars"></i>-->
-<!--                        </a>-->
-                    </div>
-                    <div class="menu" id="menu-list">
-                        <div class="home-icon">
-                            <a href="/"><img src="/images/home.png"/></a>
-                        </div>
-                        <ul>
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#projects">Projects</a></li>
-                            <li><a href="#experience">Experience</a></li>
-<!--                            <li><a href="#teaching">Teaching</a></li>-->
-                            <li><a href="#interests">Interests</a></li>
-                            <li><a href="#skills">Skills</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="main-right">
-                    <div class="main-img">
-                        <img src="/images/nimesh_m2_compressed.jpg"/>
-                    </div>
-                    <div class="heading" id="intro">
-                        Hi there!
-                    </div>
-                    <div class="description">
-                        Hello! I’m Nimesh Khandelwal, currently pursuing my PhD in Mechanical Engineering at IIT Kanpur, under the supervision of <a href="https://home.iitk.ac.in/~ssgupta/" target="_blank">Prof. Shakti S. Gupta</a> and <a href="https://home.iitk.ac.in/~mangal/" target="_blank">Prof. Mangal Kothari</a>. You can find a quick overview of my qualifications and experience in my <a target="_blank" href="documents/NimeshResumeOnePager.pdf">resume</a>.<br><br>I am also the co-founder and software lead at <a href="https://xterrarobotics.com" target="_blank" class="company-name"><b class="xterra">xTerra</b> <b class="robotics">Robotics</b></a>, where my team and I are working to develop a quadruped robot, <a href="https://xterrarobotics.com/robots-overview/" target="_blank" class="svan">Svan</a>, from the ground up. Our work focuses on innovative solutions in robotics, combining cutting-edge research with practical engineering.<br><br>
-                        I am deeply passionate about solving complex, real-world challenges. My expertise lies in designing simple yet effective control systems for autonomous mobile robots, and rigorously testing these systems through accurate physics-based simulations before deploying them on real-world platforms. <br><br>Feel free to explore my work and connect with me if you'd like to discuss ideas, research, or opportunities in robotics and mechanical engineering.
-                        
-                        
-<!--                        I am a passionate person who likes to work on hard, real world problems. I work on engineering simple but effective control systems for autonomous mobile robots, and test them in accurate physics based simulations before deploying on real systems.-->
-<!--                        For more information check out the menu pages.-->
-                    </div>
-                    <div class="heading" id="about">
-                        About me
-                    </div>
-                    <div class="description">
-<!--                        I was born and brought up in Jaipur, Rajasthan. I did my secondary and senior secondary schooling from Mahaveer Public School, Jaipur. After clearing JEE, I joined the B.Tech Program in Mechanical Engineering at NIT Jaipur (MNIT). There I was a part of <a href="https://zine.co.in">ZINE</a>, the research and robotics group of the college.<br> As a part of the group, I participated in robotics competitions at various institutes (IIT-KGP, IIT-B, MIT Pune, LDCE Ahmedabad, JECRC Jaipur, Manipal University Jaipur, etc.) and won some of them. The experience I gained as being a part of the group was invaluable and in some way it did shape my career.<br>I like to read, a lot! I also like to play Video Games and sports in my free time.-->
-                        I was born and raised in Jaipur, Rajasthan, where I completed my secondary and senior secondary education at Mahaveer Public School. After clearing the JEE, I pursued a B.Tech in Mechanical Engineering at the Malaviya National Institute of Technology (MNIT) Jaipur. During my time at MNIT, I became actively involved in ZINE, the institute's robotics and research group.<br><br>As a member of <a href="https://zine.co.in" target="_blank">ZINE</a>, I participated in several robotics competitions at institutions such as IIT Kharagpur, IIT Bombay, MIT Pune, LDCE Ahmedabad, JECRC Jaipur, and Manipal University Jaipur. These experiences helped me develop practical skills and gave me a clearer direction in my career.<br><br>In my free time, I enjoy reading, as well as playing video games and sports.
-                    </div>
-                    <div class="heading" id="projects">
-                        Projects
-                    </div>
-                    <div class="description">
-                        <ul>
-                            <li>Fabrication and simulation of VTOL based UAV swarms for Disaster Relief, Military, and Commercial Applications [<a target="_blank" href="documents/FY-Project-Repot-Group-23.pdf">report</a>]</li>
-                            <li>Simulation of Swarm Navigation Algorithm for autonomous wall construction using UAVs [<a target="_blank" href="documents/IIScInternshipSeminarReport.pdf">report</a>, <a target="_blank" href="https://github.com/nimesh00/MBZIRC_CH2_NAVIGATION">code</a>]</li>
-                            <li>Simulation of UAV based survivor detection in flood-affected areas[<a target="_blank" href="documents/IIScInternshipSeminarReport.pdf">report</a>, <a target="_blank" href="https://github.com/nimesh00/AutonomousUAVControl">code</a>]</li>
-                            <li>Multiview 3D Reconstruction using Convex Optimization from a monocular camera [<a target="_blank" href="documents/termPaper20105284.pdf">Term paper</a>, <a target="_blank" href="https://github.com/nimesh00/Monocular-3D">code</a>]</li>
-                            <li>Control of Biped robot using ATMEGA328P based MCU</li>
-                            <li>Online QR-Code decoding from FPV feed from a Tricopter UAV [<a target="_blank" href="https://github.com/nimesh00/QR_Code_decoder">code</a>]</li>
-                            <li>Design and fabrication of Autonomous Robot for ROBOCON-2018</li>
-                            <li>Autonomous Path-finding using Image processing from an overhead camera</li>
-                            <li>Dynamic Recrystallization [<a target="_blank" href="https://github.com/nimesh00/CellularAutomata">Python</a>/<a target="_blank" href="https://github.com/nimesh00/DRX_CPP">C++</a>]</li>
-                            <li>Using GoPro camera for live FPV camera feed on a drone [<a href="https://youtu.be/h9IOYmF6QT0">video</a>]</li>
-                            <li>Einstein field equations generator written in python using SymPy [<a target="_blank" href="https://github.com/nimesh00/Einstein-Field-Equations-Generator">code</a>]</li>
-                        </ul>
-                    </div>
-                    <div class="heading" id="experience">
-                        Experience
-                    </div>
-                    <div class="description">
-                        <ul>
-                            <li>Assistant research scientist (Visiting student intern) at CRRL(ECE), NYU (<b>Jan, 2024-Present</b>)</li>
-                            <li>Co-founder and Software lead at xTerra Robotics (<b>Mar, 2023-Present</b>)</li>
-                            <li>Attended the "Elite summer school on Robotics" at SDU, Odense, Denmark. (<b>Aug, 2022</b>)</li>
-                            <li>Project Intern at Department of Aerospace Engineering, IISc, Bangalore (<b>May, 2019-Jul, 2019</b>)</li>
-                            <li>Web-Developer at Drawberg Digital (<b>Dec, 2018-Feb, 2019</b>)</li>
-                            <li>Member and Mentor at <a href="http://zine.co.in/" target="_blank" target="_blank">ZINE</a>, the research and robotics group at MNIT Jaipur (<b>Spet, 2016-Aug, 2020</b>)</li>
-                        </ul>
-                    </div>
-                    <div class="heading" id="interests">
-                        Interests
-                    </div>
-                    <div class="description">
-<!--                        Primarily, I am interested in solving the problems involvoing non-linear dynamical systems, including their staility analysis and control. I am also interested in the estimation, motion planning, low-level controller development, autopilot development for robotic systems among others. My current research interests lie in the dynamics, control and stability analysis of legged robots, specifically quadrupeds.-->
-                        My primary research interests revolve around solving problems related to non-linear dynamical systems, with a focus on stability analysis and control. I am particularly interested in areas such as estimation, motion planning, low-level controller development, and autopilot systems for robotic platforms. Currently, my research is concentrated on the dynamics, control, and stability analysis of legged robots, especially quadruped robots.
-                    </div>
-                    <div class="heading" id="skills">
-                        Skills
-                    </div>
-                    <div class="description">
-                        <div class="skill-namme">
-                            Programming (C++/Python/Matlab)
-                        </div>
-                        <div class="info-bar">
-                            <div class="type advanced">&nbsp</div>
-                        </div>
-                        
-                        <div class="skill-namme">
-                            Robot Dynamics and Control
-                        </div>
-                        <div class="info-bar">
-                            <div class="type advanced">&nbsp</div>
-                        </div>
-                        <div class="skill-namme">
-                            Machine Learning
-                        </div>
-                        <div class="info-bar">
-                            <div class="type good">&nbsp</div>
-                        </div>
-                        <div class="skill-namme">
-                            Linux
-                        </div>
-                        <div class="info-bar">
-                            <div class="type advanced">&nbsp</div>
-                        </div>
-                        <div class="skill-namme">
-                            Web-developmment
-                        </div>
-                        <div class="info-bar">
-                            <div class="type intermediate">&nbsp</div>
-                        </div>
-                    </div>
-                    <div class="heading" id="contact">
-                        Contact
-                    </div>
-                    <div class="description">
-                        Nimesh Khandelwal<br>
-                        Email: <a href="mailto:meshin@xterrarobotics.com" target="_blank">meshin@xterrarobotics.com</a>,<br/><a href="mailto:nimesh20@iitk.ac.in" target="_blank">nimesh20@iitk.ac.in</a>, <a href="mailto:nimesh6798@gmail.com" target="_blank">nimesh6798@gmail.com</a><br>
-                        <div class="social icons">
-<!--                            Social:-->
-                            <a target="_blank" href="https://www.linkedin.com/in/nimesh-khandelwal-464b6a125?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B5I6CLdFRQQaZS9e4dQYarg%3D%3D"><img src="/images/linkedin.png"/></a>
-                            <a target="_blank" href="https://www.instagram.com/nimesh_khandelwal98/"><img src="/images/instagram.png"/></a>
-                            <a target="_blank" href="https://twitter.com/nimesh6798"><img src="/images/twitter.png"/></a>
-                            <a target="_blank" href="https://github.com/nimesh00"><img src="/images/github.png"/></a>
-                        </div>  
-                    </div>
-                </div>
+            <div class="hero-social">
+              <a href="https://github.com/nimesh00" target="_blank" aria-label="GitHub">
+                <img src="/images/github.png" alt="GitHub"/>
+              </a>
+              <a href="https://www.linkedin.com/in/nimesh-khandelwal-464b6a125" target="_blank" aria-label="LinkedIn">
+                <img src="/images/linkedin.png" alt="LinkedIn"/>
+              </a>
+              <a href="https://twitter.com/nimesh6798" target="_blank" aria-label="Twitter">
+                <img src="/images/twitter.png" alt="Twitter"/>
+              </a>
+              <a href="https://www.instagram.com/nimesh_khandelwal98/" target="_blank" aria-label="Instagram">
+                <img src="/images/instagram.png" alt="Instagram"/>
+              </a>
             </div>
-            <div class="footer">
-                <p>Copyright &copy; Nimesh Khandelwal. All rights reserved. <br> Designed by Nimesh Khandelwal</p>
-            </div>
+          </div>
+          <div class="hero-image">
+            <!-- <img src="/images/nimesh_m2_compressed.jpg" alt="Nimesh Khandelwal"/> -->
+            <img src="/images/nimesh_anim.jpeg" alt="Nimesh Khandelwal"/>
+          </div>
         </div>
-        <script src="scripts/main.js"></script>
-	</body>
+      </section>
+
+      <!-- About Section -->
+      <section class="section" id="about">
+        <div class="section-container">
+          <h2 class="section-title">About Me</h2>
+          <div class="about-content">
+            <div class="about-text">
+              <p>I am a PMRF (Prime Minister's Research Fellowship) fellow pursuing my PhD in Mechanical Engineering at IIT Kanpur, under the supervision of <a href="https://home.iitk.ac.in/~ssgupta/" target="_blank">Prof. Shakti S. Gupta</a> and <a href="https://home.iitk.ac.in/~mangal/" target="_blank">Prof. Mangal Kothari</a>. My research focuses on learning-based control systems for legged robots.</p>
+              <p>I am also the Co-Founder and CTO (Software) at <a href="https://xterrarobotics.com" target="_blank" class="xterra-link"><span class="xterra">xTerra</span> <span class="robotics">Robotics</span></a>, where my team and I have developed <a href="https://xterrarobotics.com/robots-overview/" target="_blank" class="svan-link">SVAN M2</a>, a commercial quadruped robot designed for industrial inspection, hazardous environment navigation, and security patrols.</p>
+              <p>My work focuses on software development and motion control research for legged robots, particularly for industrial inspection and surveillance applications. I design and implement control systems for autonomous mobile robots and test them through physics-based simulations before deploying on real hardware.</p>
+            </div>
+            <div class="about-highlights">
+              <div class="highlight-card">
+                <span class="highlight-number">Co-founder</span>
+                <span class="highlight-label">xTerra Robotics</span>
+              </div>
+              <div class="highlight-card">
+                <span class="highlight-number">Ph.D. Candidate</span>
+                <span class="highlight-label">IIT Kanpur</span>
+              </div>
+              <div class="highlight-card">
+                <span class="highlight-number">PMRF</span>
+                <span class="highlight-label">Fellowship</span>
+              </div>
+              <!-- <div class="highlight-card">
+                <span class="highlight-number">46+</span>
+                <span class="highlight-label">GitHub Repos</span>
+              </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section class="section section-alt" id="experience">
+        <div class="section-container">
+          <h2 class="section-title">Experience</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>Co-Founder & CTO (Software)</h3>
+                  <span class="timeline-date">Mar 2023 - Present</span>
+                </div>
+                <p class="timeline-org"><a href="https://xterrarobotics.com" target="_blank">xTerra Robotics</a>, Kanpur</p>
+                <p>Leading software development and motion control research for SVAN M2, a commercial quadruped robot built for industrial inspection and surveillance. Working on learning-based control systems, MPC frameworks, and ROS-based autonomy software.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>PhD Researcher (PMRF Fellow)</h3>
+                  <span class="timeline-date">2020 - Present</span>
+                </div>
+                <p class="timeline-org">IIT Kanpur, Mechanical Engineering</p>
+                <p>Research on dynamics, control, and stability analysis of legged robots. Working on nonlinear MPC, whole-body control, and reinforcement learning for quadruped locomotion.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>Visiting Research Intern</h3>
+                  <span class="timeline-date">Jan 2024 - Jan 2025</span>
+                </div>
+                <p class="timeline-org">CRRL (ECE), New York University</p>
+                <p>Worked on robotics research at NYU's Control/Robotics Research Lab in the ECE department.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>Elite Summer School on Robotics</h3>
+                  <span class="timeline-date">Aug 2022</span>
+                </div>
+                <p class="timeline-org">University of Southern Denmark, Odense</p>
+                <p>Attended a robotics summer school covering topics in robot control and autonomous systems.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>B.Tech in Mechanical Engineering</h3>
+                  <span class="timeline-date">2016 - 2020</span>
+                </div>
+                <p class="timeline-org">MNIT Jaipur</p>
+                <p>Active member and mentor at <a href="https://zine.co.in" target="_blank">ZINE</a>, the institute's robotics and research group. Participated in robotics competitions at IIT Kharagpur, IIT Bombay, MIT Pune, and more.</p>
+              </div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <div class="timeline-content">
+                <div class="timeline-header">
+                  <h3>Project Intern</h3>
+                  <span class="timeline-date">May 2019 - Jul 2019</span>
+                </div>
+                <p class="timeline-org">IISc Bangalore, Aerospace Engineering</p>
+                <p>Worked on UAV swarm navigation algorithms for the MBZIRC 2020 challenge and autonomous flood-area survivor detection.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Projects Section -->
+      <section class="section" id="projects">
+        <div class="section-container">
+          <h2 class="section-title">Projects</h2>
+          <div class="projects-grid">
+            <div class="project-card featured">
+              <div class="project-tag">Featured</div>
+              <h3>SVAN M2 Quadruped Robot</h3>
+              <p>A commercial quadruped robot designed for industrial inspection and surveillance. 11 kg, 12 DOF, ~5 kg payload, 1 m/s max speed. ROS-based with Raspberry Pi 4B onboard. Built for navigating hazardous and unstructured environments.</p>
+              <div class="project-tech">
+                <span>ROS</span><span>C++</span><span>Python</span><span>MPC</span><span>RL</span>
+              </div>
+              <div class="project-links">
+                <a href="https://xterrarobotics.com/robots-overview/" target="_blank">Learn More</a>
+              </div>
+            </div>
+            <!-- <div class="project-card">
+              <h3>Legged Robot Control (MPC + WBC)</h3>
+              <p>Nonlinear Model Predictive Control with Whole-Body Control framework using OCS2 and ROS for quadruped locomotion.</p>
+              <div class="project-tech">
+                <span>C++</span><span>OCS2</span><span>ROS</span><span>MPC</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/nimesh00/legged_control" target="_blank">Code</a>
+              </div>
+            </div>
+            <div class="project-card">
+              <h3>MuJoCo-Warp RL Framework</h3>
+              <p>Isaac Lab-style API built on MuJoCo-Warp for reinforcement learning research in robotics simulation.</p>
+              <div class="project-tech">
+                <span>Python</span><span>MuJoCo</span><span>RL</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/nimesh00/mjlab" target="_blank">Code</a>
+              </div>
+            </div>
+            <div class="project-card">
+              <h3>LiDAR-Inertial Odometry for Legged Robots</h3>
+              <p>Direct LiDAR-inertial odometry adapted for legged robots, based on IEEE ICRA 2023 research.</p>
+              <div class="project-tech">
+                <span>C++</span><span>ROS</span><span>LiDAR</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/nimesh00/direct_lidar_legged_inertial_odometry" target="_blank">Code</a>
+              </div>
+            </div>
+            <div class="project-card">
+              <h3>CAFE-MPC</h3>
+              <p>Model Predictive Control framework for contact-rich robotic systems.</p>
+              <div class="project-tech">
+                <span>C++</span><span>MPC</span><span>Optimization</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/nimesh00/CAFE-MPC" target="_blank">Code</a>
+              </div>
+            </div> -->
+            <div class="project-card">
+              <h3>Cellular Automata (DRX)</h3>
+              <p>Dynamic recrystallization simulation using cellular automata. Implementations in both Python and C++.</p>
+              <div class="project-tech">
+                <span>Python</span><span>C++</span><span>Simulation</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/nimesh00/CellularAutomata" target="_blank">Python</a>
+                <a href="https://github.com/nimesh00/DRX_CPP" target="_blank">C++</a>
+              </div>
+            </div>
+            <div class="project-card">
+              <h3>UAV Swarm Navigation</h3>
+              <p>Autonomous wall construction using UAV swarms for MBZIRC 2020 challenge. Includes survivor detection in flood-affected areas.</p>
+              <div class="project-tech">
+                <span>ROS</span><span>PX4</span><span>MAVROS</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/nimesh00/MBZIRC_CH2_NAVIGATION" target="_blank">Code</a>
+                <a href="documents/IIScInternshipSeminarReport.pdf" target="_blank">Report</a>
+              </div>
+            </div>
+            <div class="project-card">
+              <h3>Monocular 3D Reconstruction</h3>
+              <p>Multiview 3D reconstruction using convex optimization from a monocular camera (EE609A, IIT Kanpur).</p>
+              <div class="project-tech">
+                <span>Python</span><span>Optimization</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/nimesh00/Monocular-3D" target="_blank">Code</a>
+                <a href="documents/termPaper20105284.pdf" target="_blank">Paper</a>
+              </div>
+            </div>
+            <div class="project-card">
+              <h3>Einstein Field Equations Generator</h3>
+              <p>Symbolic computation of Einstein field equations using Python and SymPy.</p>
+              <div class="project-tech">
+                <span>Python</span><span>SymPy</span>
+              </div>
+              <div class="project-links">
+                <a href="https://github.com/nimesh00/Einstein-Field-Equations-Generator" target="_blank">Code</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="section section-alt" id="skills">
+        <div class="section-container">
+          <h2 class="section-title">Skills & Technologies</h2>
+          <div class="skills-grid">
+            <div class="skill-category">
+              <h3>Robotics & Control</h3>
+              <div class="skill-tags">
+                <span>Model Predictive Control</span>
+                <span>Whole-Body Control</span>
+                <span>Reinforcement Learning</span>
+                <span>Motion Planning</span>
+                <span>Stability Analysis</span>
+                <span>Nonlinear Dynamics</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Frameworks & Tools</h3>
+              <div class="skill-tags">
+                <span>ROS</span>
+                <span>OCS2</span>
+                <span>MuJoCo</span>
+                <span>Isaac Lab</span>
+                <span>PX4</span>
+                <span>MAVROS</span>
+                <span>Genesis</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>Programming</h3>
+              <div class="skill-tags">
+                <span>C++</span>
+                <span>Python</span>
+                <span>MATLAB</span>
+                <span>ROS/C++</span>
+                <span>Linux</span>
+                <span>Git</span>
+              </div>
+            </div>
+            <div class="skill-category">
+              <h3>AI & Perception</h3>
+              <div class="skill-tags">
+                <span>Deep RL</span>
+                <span>LiDAR-Inertial Odometry</span>
+                <span>Computer Vision</span>
+                <span>3D Reconstruction</span>
+                <span>NVIDIA CUDA</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Research Section -->
+      <section class="section" id="publications">
+        <div class="section-container">
+          <h2 class="section-title">Research Interests</h2>
+          <div class="research-content">
+            <div class="research-areas">
+              <div class="research-card">
+                <h3>Legged Locomotion</h3>
+                <p>Dynamics, control, and stability analysis of quadruped robots. Developing locomotion controllers for various terrain types.</p>
+              </div>
+              <div class="research-card">
+                <h3>Learning-Based Control</h3>
+                <p>Combining model-based control with reinforcement learning for adaptive robot behavior. Sim-to-real transfer for real-world deployment.</p>
+              </div>
+              <div class="research-card">
+                <h3>Nonlinear Dynamical Systems</h3>
+                <p>Stability analysis and control of nonlinear systems. Model Predictive Control for contact-rich robotic manipulation and locomotion.</p>
+              </div>
+              <div class="research-card">
+                <h3>Autonomous Navigation</h3>
+                <p>LiDAR-inertial odometry, estimation, and motion planning for autonomous mobile robots in unstructured environments.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section class="section section-alt" id="contact">
+        <div class="section-container">
+          <h2 class="section-title">Get in Touch</h2>
+          <div class="contact-content">
+            <p class="contact-text">Open to discussing research, collaboration, or opportunities in robotics and engineering.</p>
+            <div class="contact-links">
+              <a href="mailto:meshin@xterrarobotics.com" class="contact-item">
+                <span class="contact-label">Work</span>
+                <span class="contact-value">meshin@xterrarobotics.com</span>
+              </a>
+              <a href="mailto:nimesh20@iitk.ac.in" class="contact-item">
+                <span class="contact-label">Academic</span>
+                <span class="contact-value">nimesh20@iitk.ac.in</span>
+              </a>
+              <a href="mailto:nimesh6798@gmail.com" class="contact-item">
+                <span class="contact-label">Personal</span>
+                <span class="contact-value">nimesh6798@gmail.com</span>
+              </a>
+            </div>
+            <div class="contact-social">
+              <a href="https://github.com/nimesh00" target="_blank" aria-label="GitHub"><img src="/images/github.png" alt="GitHub"/></a>
+              <a href="https://www.linkedin.com/in/nimesh-khandelwal-464b6a125" target="_blank" aria-label="LinkedIn"><img src="/images/linkedin.png" alt="LinkedIn"/></a>
+              <a href="https://twitter.com/nimesh6798" target="_blank" aria-label="Twitter"><img src="/images/twitter.png" alt="Twitter"/></a>
+              <a href="https://www.instagram.com/nimesh_khandelwal98/" target="_blank" aria-label="Instagram"><img src="/images/instagram.png" alt="Instagram"/></a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>Copyright &copy; Nimesh Khandelwal. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+  </body>
 </html>
